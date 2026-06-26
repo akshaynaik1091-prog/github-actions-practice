@@ -11,6 +11,11 @@ jobs:
          - name: checkout the code
            uses: actions/checkout@v7
 
+         - name: Setup Python
+         - uses: actions/setup-python@v6
+           with:
+               python-version: '3.13'
+
          - name: Install Python Linter
            run: pip install ruff
          - name: check the file linting
